@@ -65,13 +65,18 @@ type CreditCardInfo struct {
 }
 
 // CreditCard will generate a struct full of credit card information
-func CreditCard() *CreditCardInfo { return creditCard(globalFaker.Rand) }
+func CreditCard(ccTypes ...string) *CreditCardInfo { return creditCard(globalFaker.Rand, ccTypes...) }
 
 // CreditCard will generate a struct full of credit card information
 func (f *Faker) CreditCard() *CreditCardInfo { return creditCard(f.Rand) }
 
-func creditCard(r *rand.Rand) *CreditCardInfo {
-	ccType := randomString(r, data.CreditCardTypes)
+func creditCard(r *rand.Rand, ccTypes ...string) *CreditCardInfo {
+	var ccType string
+	if len(ccTypes) > 0 {
+		ccType = randomString(r, ccTypes)
+	} else {
+		ccType = randomString(r, data.CreditCardTypes)
+	}
 	return &CreditCardInfo{
 		Type:   data.CreditCards[randomString(r, data.CreditCardTypes)].Display,
 		Number: creditCardNumber(r, &CreditCardOptions{Types: []string{ccType}}),

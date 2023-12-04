@@ -6,7 +6,7 @@ All functions are available to run in lowercase as first path and if they take i
 ### Installation
 
 ```go
-go get -u github.com/Grizz1ya/gofakeit/v6/cmd/gofakeitserver
+go get -u github.com/Grizz1ya/gofakeit/cmd/gofakeitserver
 ```
 
 ### Example

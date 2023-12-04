@@ -1,7 +1,7 @@
 go test -bench=. -benchmem
 goos: linux
 goarch: amd64
-pkg: github.com/Grizz1ya/gofakeit/v6
+pkg: github.com/Grizz1ya/gofakeit
 cpu: 11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz
 Table generated with tablesgenerator.com/markdown_tables
 

@@ -7,7 +7,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/Grizz1ya/gofakeit/v6/data"
+	"github.com/Grizz1ya/gofakeit/data"
 )
 
 // CurrencyInfo is a struct of currency information

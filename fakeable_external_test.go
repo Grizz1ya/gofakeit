@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/Grizz1ya/gofakeit/v6"
+	"github.com/Grizz1ya/gofakeit"
 )
 
 var (

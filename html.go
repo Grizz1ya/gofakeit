@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/Grizz1ya/gofakeit/v6/data"
+	"github.com/Grizz1ya/gofakeit/data"
 )
 
 // InputName will return a random input field name

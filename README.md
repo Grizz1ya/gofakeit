@@ -1,6 +1,6 @@
 ![alt text](https://raw.githubusercontent.com/Grizz1ya/gofakeit/master/logo.png)
 
-# Gofakeit [![Go Report Card](https://goreportcard.com/badge/github.com/Grizz1ya/gofakeit)](https://goreportcard.com/report/github.com/Grizz1ya/gofakeit) ![Test](https://github.com/Grizz1ya/gofakeit/workflows/Test/badge.svg?branch=master) [![codecov.io](https://codecov.io/github/Grizz1ya/gofakeit/branch/master/graph/badge.svg)](https://codecov.io/github/Grizz1ya/gofakeit) [![GoDoc](https://godoc.org/github.com/Grizz1ya/gofakeit/v6?status.svg)](https://godoc.org/github.com/Grizz1ya/gofakeit/v6) [![license](http://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://raw.githubusercontent.com/Grizz1ya/gofakeit/master/LICENSE.txt)
+# Gofakeit [![Go Report Card](https://goreportcard.com/badge/github.com/Grizz1ya/gofakeit)](https://goreportcard.com/report/github.com/Grizz1ya/gofakeit) ![Test](https://github.com/Grizz1ya/gofakeit/workflows/Test/badge.svg?branch=master) [![codecov.io](https://codecov.io/github/Grizz1ya/gofakeit/branch/master/graph/badge.svg)](https://codecov.io/github/Grizz1ya/gofakeit) [![GoDoc](https://godoc.org/github.com/Grizz1ya/gofakeit?status.svg)](https://godoc.org/github.com/Grizz1ya/gofakeit) [![license](http://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://raw.githubusercontent.com/Grizz1ya/gofakeit/master/LICENSE.txt)
 
 Random data generator written in go
 
@@ -33,13 +33,13 @@ Thanks to everyone who has contributed to Gofakeit!
 ## Installation
 
 ```go
-go get github.com/Grizz1ya/gofakeit/v6
+go get github.com/Grizz1ya/gofakeit
 ```
 
 ## Simple Usage
 
 ```go
-import "github.com/Grizz1ya/gofakeit/v6"
+import "github.com/Grizz1ya/gofakeit"
 
 gofakeit.Name()             // Markus Moen
 gofakeit.Email()            // alaynawuckert@kozey.biz
@@ -65,7 +65,7 @@ If you need a reproducible outcome you can set it via the Seed function call. Ev
 this repo sets it for testing purposes.
 
 ```go
-import "github.com/Grizz1ya/gofakeit/v6"
+import "github.com/Grizz1ya/gofakeit"
 
 gofakeit.Seed(0) // If 0 will use crypto/rand to generate a number
 
@@ -81,7 +81,7 @@ Gofakeit has a few rand sources, by default it uses math.Rand and uses mutex loc
 If you want to use a more performant source please use NewUnlocked. Be aware that it is not goroutine safe.
 
 ```go
-import "github.com/Grizz1ya/gofakeit/v6"
+import "github.com/Grizz1ya/gofakeit"
 
 // Uses math/rand(Pseudo) with mutex locking
 faker := gofakeit.New(0)
@@ -103,7 +103,7 @@ If you would like to use the simple function calls but need to use something lik
 crypto/rand you can override the default global with the random source that you want.
 
 ```go
-import "github.com/Grizz1ya/gofakeit/v6"
+import "github.com/Grizz1ya/gofakeit"
 
 faker := gofakeit.NewCrypto()
 gofakeit.SetGlobalFaker(faker)
@@ -117,7 +117,7 @@ as well as some non-basic like time.Time.
 Struct fields can also use tags to more specifically generate data for that field type.
 
 ```go
-import "github.com/Grizz1ya/gofakeit/v6"
+import "github.com/Grizz1ya/gofakeit"
 
 // Create structs with random injected data
 type Foo struct {
@@ -302,7 +302,7 @@ Additional Available Functions
 ### Example Usages
 
 ```go
-import "github.com/Grizz1ya/gofakeit/v6"
+import "github.com/Grizz1ya/gofakeit"
 
 func main() {
 	// Accessing the Lines variable from within the template.

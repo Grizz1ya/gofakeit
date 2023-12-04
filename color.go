@@ -3,7 +3,7 @@ package gofakeit
 import (
 	"math/rand"
 
-	"github.com/brianvoe/gofakeit/v6/data"
+	"github.com/Grizz1ya/gofakeit/v6/data"
 )
 
 // Color will generate a random color string

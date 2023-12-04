@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/brianvoe/gofakeit/v6/data"
+	"github.com/Grizz1ya/gofakeit/v6/data"
 )
 
 func TestMain(t *testing.T) {

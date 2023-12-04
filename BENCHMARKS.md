@@ -1,12 +1,12 @@
 go test -bench=. -benchmem
 goos: linux
 goarch: amd64
-pkg: github.com/brianvoe/gofakeit/v6
+pkg: github.com/Grizz1ya/gofakeit/v6
 cpu: 11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz
-Table generated with tablesgenerator.com/markdown_tables 
+Table generated with tablesgenerator.com/markdown_tables
 
 | Benchmark                                        | Ops        | CPU              | MEM            | MEM alloc         |
-|--------------------------------------------------|------------|------------------|----------------|-------------------|
+| ------------------------------------------------ | ---------- | ---------------- | -------------- | ----------------- |
 | BenchmarkAddress/package-8                       | 1270872    | 940.1 ns/op      | 197 B/op       | 5 allocs/op       |
 | BenchmarkAddress/Faker_math-8                    | 1238563    | 1042 ns/op       | 197 B/op       | 5 allocs/op       |
 | BenchmarkAddress/Faker_crypto-8                  | 139857     | 7862 ns/op       | 197 B/op       | 5 allocs/op       |

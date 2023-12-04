@@ -1,6 +1,6 @@
 ![alt text](https://raw.githubusercontent.com/brianvoe/gofakeit/master/logo.png)
 
-# Gofakeit [![Go Report Card](https://goreportcard.com/badge/github.com/brianvoe/gofakeit)](https://goreportcard.com/report/github.com/brianvoe/gofakeit) ![Test](https://github.com/brianvoe/gofakeit/workflows/Test/badge.svg?branch=master) [![codecov.io](https://codecov.io/github/brianvoe/gofakeit/branch/master/graph/badge.svg)](https://codecov.io/github/brianvoe/gofakeit) [![GoDoc](https://godoc.org/github.com/brianvoe/gofakeit/v6?status.svg)](https://godoc.org/github.com/brianvoe/gofakeit/v6) [![license](http://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://raw.githubusercontent.com/brianvoe/gofakeit/master/LICENSE.txt)
+# Gofakeit [![Go Report Card](https://goreportcard.com/badge/github.com/brianvoe/gofakeit)](https://goreportcard.com/report/github.com/brianvoe/gofakeit) ![Test](https://github.com/brianvoe/gofakeit/workflows/Test/badge.svg?branch=master) [![codecov.io](https://codecov.io/github/brianvoe/gofakeit/branch/master/graph/badge.svg)](https://codecov.io/github/brianvoe/gofakeit) [![GoDoc](https://godoc.org/github.com/Grizz1ya/gofakeit/v6?status.svg)](https://godoc.org/github.com/Grizz1ya/gofakeit/v6) [![license](http://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://raw.githubusercontent.com/brianvoe/gofakeit/master/LICENSE.txt)
 
 Random data generator written in go
 
@@ -33,13 +33,13 @@ Thanks to everyone who has contributed to Gofakeit!
 ## Installation
 
 ```go
-go get github.com/brianvoe/gofakeit/v6
+go get github.com/Grizz1ya/gofakeit/v6
 ```
 
 ## Simple Usage
 
 ```go
-import "github.com/brianvoe/gofakeit/v6"
+import "github.com/Grizz1ya/gofakeit/v6"
 
 gofakeit.Name()             // Markus Moen
 gofakeit.Email()            // alaynawuckert@kozey.biz
@@ -65,7 +65,7 @@ If you need a reproducible outcome you can set it via the Seed function call. Ev
 this repo sets it for testing purposes.
 
 ```go
-import "github.com/brianvoe/gofakeit/v6"
+import "github.com/Grizz1ya/gofakeit/v6"
 
 gofakeit.Seed(0) // If 0 will use crypto/rand to generate a number
 
@@ -81,7 +81,7 @@ Gofakeit has a few rand sources, by default it uses math.Rand and uses mutex loc
 If you want to use a more performant source please use NewUnlocked. Be aware that it is not goroutine safe.
 
 ```go
-import "github.com/brianvoe/gofakeit/v6"
+import "github.com/Grizz1ya/gofakeit/v6"
 
 // Uses math/rand(Pseudo) with mutex locking
 faker := gofakeit.New(0)
@@ -103,7 +103,7 @@ If you would like to use the simple function calls but need to use something lik
 crypto/rand you can override the default global with the random source that you want.
 
 ```go
-import "github.com/brianvoe/gofakeit/v6"
+import "github.com/Grizz1ya/gofakeit/v6"
 
 faker := gofakeit.NewCrypto()
 gofakeit.SetGlobalFaker(faker)
@@ -117,7 +117,7 @@ as well as some non-basic like time.Time.
 Struct fields can also use tags to more specifically generate data for that field type.
 
 ```go
-import "github.com/brianvoe/gofakeit/v6"
+import "github.com/Grizz1ya/gofakeit/v6"
 
 // Create structs with random injected data
 type Foo struct {
@@ -266,8 +266,6 @@ fmt.Printf("%s", f.FriendName) // bill
 fmt.Printf("%s", f.JumbleWord) // loredlowlh
 ```
 
-
-
 ## Templates
 
 Generate custom outputs using golang's template engine [https://pkg.go.dev/text/template](https://pkg.go.dev/text/template).
@@ -275,6 +273,7 @@ Generate custom outputs using golang's template engine [https://pkg.go.dev/text/
 We have added all the available functions to the template engine as well as some additional ones that are useful for template building.
 
 Additional Available Functions
+
 ```go
 - ToUpper(s string) string   // Make string upper case
 - ToLower(s string) string   // Make string lower case
@@ -297,13 +296,13 @@ Additional Available Functions
 - Template(co *TemplateOptions) ([]byte, error)
 - RandomMapKey(mapI any) any
 ```
-</details>
 
+</details>
 
 ### Example Usages
 
 ```go
-import "github.com/brianvoe/gofakeit/v6"
+import "github.com/Grizz1ya/gofakeit/v6"
 
 func main() {
 	// Accessing the Lines variable from within the template.
@@ -334,6 +333,7 @@ func main() {
 ```
 
 Output:
+
 ```text
 Subject: Hello
 
@@ -364,7 +364,6 @@ XML(xo *XMLOptions) ([]byte, error)
 FileExtension() string
 FileMimeType() string
 ```
-
 
 ### Person
 

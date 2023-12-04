@@ -11,7 +11,7 @@ import (
 	"strings"
 	"unicode"
 
-	"github.com/brianvoe/gofakeit/v6/data"
+	"github.com/Grizz1ya/gofakeit/v6/data"
 )
 
 const lowerStr = "abcdefghijklmnopqrstuvwxyz"

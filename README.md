@@ -1,12 +1,12 @@
-![alt text](https://raw.githubusercontent.com/brianvoe/gofakeit/master/logo.png)
+![alt text](https://raw.githubusercontent.com/Grizz1ya/gofakeit/master/logo.png)
 
-# Gofakeit [![Go Report Card](https://goreportcard.com/badge/github.com/brianvoe/gofakeit)](https://goreportcard.com/report/github.com/brianvoe/gofakeit) ![Test](https://github.com/brianvoe/gofakeit/workflows/Test/badge.svg?branch=master) [![codecov.io](https://codecov.io/github/brianvoe/gofakeit/branch/master/graph/badge.svg)](https://codecov.io/github/brianvoe/gofakeit) [![GoDoc](https://godoc.org/github.com/Grizz1ya/gofakeit/v6?status.svg)](https://godoc.org/github.com/Grizz1ya/gofakeit/v6) [![license](http://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://raw.githubusercontent.com/brianvoe/gofakeit/master/LICENSE.txt)
+# Gofakeit [![Go Report Card](https://goreportcard.com/badge/github.com/Grizz1ya/gofakeit)](https://goreportcard.com/report/github.com/Grizz1ya/gofakeit) ![Test](https://github.com/Grizz1ya/gofakeit/workflows/Test/badge.svg?branch=master) [![codecov.io](https://codecov.io/github/Grizz1ya/gofakeit/branch/master/graph/badge.svg)](https://codecov.io/github/Grizz1ya/gofakeit) [![GoDoc](https://godoc.org/github.com/Grizz1ya/gofakeit/v6?status.svg)](https://godoc.org/github.com/Grizz1ya/gofakeit/v6) [![license](http://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://raw.githubusercontent.com/Grizz1ya/gofakeit/master/LICENSE.txt)
 
 Random data generator written in go
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/G2G0R5EJT)
 
-<a href="https://www.buymeacoffee.com/brianvoe" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
+<a href="https://www.buymeacoffee.com/Grizz1ya" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
 
 ## Features
 
@@ -16,18 +16,18 @@ Random data generator written in go
 - [Struct Generator](#struct)
 - [Custom Functions](#custom-functions)
 - [Templates](#templates)
-- [Http Server](https://github.com/brianvoe/gofakeit/tree/master/cmd/gofakeitserver)
-- [Command Line Tool](https://github.com/brianvoe/gofakeit/tree/master/cmd/gofakeit)
+- [Http Server](https://github.com/Grizz1ya/gofakeit/tree/master/cmd/gofakeitserver)
+- [Command Line Tool](https://github.com/Grizz1ya/gofakeit/tree/master/cmd/gofakeit)
 - Zero dependencies
-- [Benchmarks](https://github.com/brianvoe/gofakeit/blob/master/BENCHMARKS.md)
-- [Issue](https://github.com/brianvoe/gofakeit/issues)
+- [Benchmarks](https://github.com/Grizz1ya/gofakeit/blob/master/BENCHMARKS.md)
+- [Issue](https://github.com/Grizz1ya/gofakeit/issues)
 
 ## Contributors
 
 Thanks to everyone who has contributed to Gofakeit!
 
-<a href="https://github.com/brianvoe/gofakeit/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=brianvoe/gofakeit" />
+<a href="https://github.com/Grizz1ya/gofakeit/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Grizz1ya/gofakeit" />
 </a>
 
 ## Installation

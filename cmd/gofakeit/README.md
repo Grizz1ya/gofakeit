@@ -29,4 +29,4 @@ gofakeit list
 gofakeit list [category] [function]
 ```
 
-![](https://raw.githubusercontent.com/brianvoe/gofakeit/master/cmd/gofakeit/cmd.gif)
+![](https://raw.githubusercontent.com/Grizz1ya/gofakeit/master/cmd/gofakeit/cmd.gif)

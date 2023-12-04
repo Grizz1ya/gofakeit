@@ -15,4 +15,4 @@ go get -u github.com/Grizz1ya/gofakeit/v6/cmd/gofakeitserver
 gofakeitserver // default port is 8080
 ```
 
-![](https://raw.githubusercontent.com/brianvoe/gofakeit/master/cmd/gofakeitserver/server.gif)
+![](https://raw.githubusercontent.com/Grizz1ya/gofakeit/master/cmd/gofakeitserver/server.gif)

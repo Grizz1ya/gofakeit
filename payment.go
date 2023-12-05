@@ -65,12 +65,14 @@ type CreditCardInfo struct {
 }
 
 // CreditCard will generate a struct full of credit card information
-func CreditCard(ccTypes ...string) *CreditCardInfo { return creditCard(globalFaker.Rand, ccTypes...) }
+func CreditCard(maxDate int, ccTypes ...string) *CreditCardInfo {
+	return creditCard(globalFaker.Rand, maxDate, ccTypes...)
+}
 
 // CreditCard will generate a struct full of credit card information
-func (f *Faker) CreditCard() *CreditCardInfo { return creditCard(f.Rand) }
+func (f *Faker) CreditCard(maxDate int) *CreditCardInfo { return creditCard(f.Rand, maxDate) }
 
-func creditCard(r *rand.Rand, ccTypes ...string) *CreditCardInfo {
+func creditCard(r *rand.Rand, maxDate int, ccTypes ...string) *CreditCardInfo {
 	var ccType string
 	if len(ccTypes) > 0 {
 		ccType = randomString(r, ccTypes)
@@ -80,7 +82,7 @@ func creditCard(r *rand.Rand, ccTypes ...string) *CreditCardInfo {
 	return &CreditCardInfo{
 		Type:   data.CreditCards[randomString(r, data.CreditCardTypes)].Display,
 		Number: creditCardNumber(r, &CreditCardOptions{Types: []string{ccType}}),
-		Exp:    creditCardExp(r),
+		Exp:    creditCardExp(r, maxDate),
 		Cvv:    generate(r, strings.Repeat("#", int(data.CreditCards[randomString(r, data.CreditCardTypes)].Code.Size))),
 	}
 }
@@ -160,20 +162,20 @@ func creditCardNumber(r *rand.Rand, cco *CreditCardOptions) string {
 
 // CreditCardExp will generate a random credit card expiration date string
 // Exp date will always be a future date
-func CreditCardExp() string { return creditCardExp(globalFaker.Rand) }
+func CreditCardExp(maxDate int) string { return creditCardExp(globalFaker.Rand, maxDate) }
 
 // CreditCardExp will generate a random credit card expiration date string
 // Exp date will always be a future date
-func (f *Faker) CreditCardExp() string { return creditCardExp(f.Rand) }
+func (f *Faker) CreditCardExp(maxDate int) string { return creditCardExp(f.Rand, maxDate) }
 
-func creditCardExp(r *rand.Rand) string {
+func creditCardExp(r *rand.Rand, maxDate int) string {
 	month := strconv.Itoa(randIntRange(r, 1, 12))
 	if len(month) == 1 {
 		month = "0" + month
 	}
 
 	var currentYear = time.Now().Year() - 2000
-	return month + "/" + strconv.Itoa(randIntRange(r, currentYear+1, currentYear+10))
+	return month + "/" + strconv.Itoa(randIntRange(r, currentYear+1, currentYear+maxDate))
 }
 
 // CreditCardCvv will generate a random CVV number
@@ -311,7 +313,7 @@ func addPaymentLookup() {
 		Example:     `{type: "Visa", number: "4136459948995369", exp: "01/21", cvv: "513"}`,
 		Output:      "map[string]interface",
 		Generate: func(r *rand.Rand, m *MapParams, info *Info) (any, error) {
-			return creditCard(r), nil
+			return creditCard(r, 10), nil
 		},
 	})
 
@@ -377,7 +379,7 @@ func addPaymentLookup() {
 		Example:     "01/21",
 		Output:      "string",
 		Generate: func(r *rand.Rand, m *MapParams, info *Info) (any, error) {
-			return creditCardExp(r), nil
+			return creditCardExp(r, 10), nil
 		},
 	})
 

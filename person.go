@@ -38,7 +38,7 @@ func person(r *rand.Rand) *PersonInfo {
 		Job:        job(r),
 		Address:    address(r),
 		Contact:    contact(r),
-		CreditCard: creditCard(r),
+		CreditCard: creditCard(r, 4),
 	}
 }
 

@@ -81,7 +81,7 @@ func BenchmarkPrice(b *testing.B) {
 
 func ExampleCreditCard() {
 	Seed(11)
-	ccInfo := CreditCard()
+	ccInfo := CreditCard(10)
 	fmt.Println(ccInfo.Type)
 	fmt.Println(ccInfo.Number)
 	fmt.Println(ccInfo.Exp)
@@ -95,7 +95,7 @@ func ExampleCreditCard() {
 
 func ExampleFaker_CreditCard() {
 	f := New(11)
-	ccInfo := f.CreditCard()
+	ccInfo := f.CreditCard(10)
 	fmt.Println(ccInfo.Type)
 	fmt.Println(ccInfo.Number)
 	fmt.Println(ccInfo.Exp)
@@ -109,7 +109,7 @@ func ExampleFaker_CreditCard() {
 
 func BenchmarkCreditCard(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		CreditCard()
+		CreditCard(10)
 	}
 }
 
@@ -200,19 +200,19 @@ func TestIsLuhn(t *testing.T) {
 
 func ExampleCreditCardExp() {
 	Seed(11)
-	fmt.Println(CreditCardExp())
+	fmt.Println(CreditCardExp(10))
 	// Output: 06/30
 }
 
 func ExampleFaker_CreditCardExp() {
 	f := New(11)
-	fmt.Println(f.CreditCardExp())
+	fmt.Println(f.CreditCardExp(10))
 	// Output: 06/30
 }
 
 func BenchmarkCreditCardExp(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		CreditCardExp()
+		CreditCardExp(10)
 	}
 }
 
